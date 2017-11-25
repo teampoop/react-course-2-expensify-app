@@ -1,1 +1,1 @@
-This is the result of the great Udemy course "React 2nd Edition". If you like to learn usefull stuffs, go buy it.
+This is the result of the great Udemy course "React 2nd Edition". If you like to learn useful stuffs, go buy it.
