@@ -1,19 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should show 1 expense totalling $1.95 1`] = `
-<p>
-  Viewing 
-  1 expense
-   totalling 
-  $1.95
-</p>
+<div>
+  <p>
+    Viewing 
+    1
+     
+    expense
+     totalling 
+    $1.95
+  </p>
+</div>
 `;
 
 exports[`should show two expenses totaling $1,096.95 1`] = `
-<p>
-  Viewing 
-  2 expenses
-   totalling 
-  $1,096.95
-</p>
+<div>
+  <p>
+    Viewing 
+    2
+     
+    expenses
+     totalling 
+    $10.97
+  </p>
+</div>
 `;
