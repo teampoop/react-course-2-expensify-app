@@ -8,7 +8,7 @@ import AppRouter from './routers/AppRouter';
 // Store.
 import configureStore from './store/configureStore';
 // Actions for reducers.
-import { addExpense } from './actions/expenses';
+import { startSetExpenses } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 // Selection function.
 import getVisibleExpenses from './selectors/expenses';
@@ -25,4 +25,8 @@ const jsx = (
     <AppRouter />
   </Provider>
 );
-ReactDOM.render(jsx, document.getElementById('app'));
+
+ReactDOM.render(<p>loading...</p>, document.getElementById('app'));
+store.dispatch(startSetExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById('app'));
+})
