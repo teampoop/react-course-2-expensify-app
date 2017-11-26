@@ -51,7 +51,7 @@ export const startSetExpenses = () => {
         const expenses = [];
         snapshot.forEach((childSnapshot) => {
           expenses.push({
-            id: parseInt(childSnapshot.key),
+            id: childSnapshot.key,
             ...childSnapshot.val()
           })
         });

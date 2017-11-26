@@ -5,7 +5,7 @@ exports[`should render ExpenseListItem correctly 1`] = `
   <h3>
     <Link
       replace={false}
-      to="/edit/2"
+      to="/edit/def"
     >
       Rent
     </Link>
