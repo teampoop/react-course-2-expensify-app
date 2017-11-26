@@ -5,9 +5,12 @@ const promise = new Promise((resolve, reject) => {
 });
 
 console.log('Before');
-promise.then((data) => {
-  console.log(data);
-}).catch((error) => {
-  console.log('error: ', error);
-});
+promise
+  .then((data) => {
+    console.log(data);
+
+  })
+  .catch((error) => {
+    console.log('error: ', error);
+  });
 console.log('After');
