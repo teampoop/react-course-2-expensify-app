@@ -13,11 +13,47 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-database.ref()
-  .on('value', (snapshot) => {
-    const val = snapshot.val();
-    console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
-  }, (e) => { console.log('error: ', e)});
+database.ref('expenses').on('child_removed', (snapshot) => {
+  console.log(snapshot.key, snapshot.val());
+});
+
+database.ref('expenses').on('child_changed', (s) => {
+  console.log(s.key, s.val());
+});
+
+database.ref('expenses').on('child_added', (s) => {
+  console.log(s.key, s.val());
+});
+
+// database.ref('expenses')
+//   .on('value', (snapshot) => {
+//     const expenses = [];
+//     snapshot.forEach((childSnapshot) => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val()
+//       })
+//     });
+//     console.log(expenses);
+//   }, (e) => { console.log('aaaaaaa', e)});
+
+// database.ref('expenses').push({
+//   description: 'Credit Card: Best By',
+//   note: '',
+//   amount: 4500,
+//   createdAt: 50000
+// });
+
+// database.ref('notes').push({
+//   title: 'fexhssk',
+//   body: 'monkey dick'
+// });
+
+// database.ref()
+//   .on('value', (snapshot) => {
+//     const val = snapshot.val();
+//     console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
+//   }, (e) => { console.log('error: ', e)});
 
 // const onValueChange = database.ref()
 //   .on('value', (snapshot) => {
